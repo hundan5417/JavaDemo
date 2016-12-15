@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+	
+	
+	function cale() {
+		var check=$("#caletable");
+		if(check[0]==null){
+		var table=("<table border=\"1\" id='caletable'>");
+		for (i = 1; i < 10; i++) {
+			table+=("<tr>");
+			var trsum=0;
+			for (j = 1; j < 10; j++) {
+				if (j <= i) {
+					table+=("<td>" + j + "*" + i + "=" + i * j + "</td>");
+					trsum+=i*j;
+				} else {
+					table+=("<td>&nbsp;</td>");
+				}
+			}
+			table+=("<td style='visibility:hidden' class='hidedemo'>"+"行总和="+trsum+"</td>");
+			
+			table+=("</tr>");
+			table+=("<tr>");
+		}
+			for(x=1;x<=9;x++)
+			{
+				var tdsum=0;
+				for(y=x;y<10;y++)
+				{
+					tdsum+=(x*y);
+					}
+					table+=("<td style='visibility:hidden' class='hidedemo'>"+"列总和="+tdsum+"</td>");
+				}
+		table+=("</tr>");
+		var tableend=("</table>");
+		$("#flag").append(table,tableend);
+	}
+	else
+	{
+		alert("已有乘法表");
+		}
+	}
+	function showcale()
+	{
+		$(".hidedemo").removeAttr("style")
+		}
+		function change()
+		{
+			$("#caletable").attr("border","10px");
+			$("#caletable").attr("style","background-color:lightblue");
+			$("#caletable").css("color","red").css("text-align","center");
+			
+			}
+</script>
+</head>
+
+<body>
+<p id="ti" align="center">九九乘法表</p>
+<hr/>
+<table width="584" border="0" id="ta" >
+  <tr>
+    <th width="209" scope="col" ><input id="9*9" type="button" value="打印乘法表" onclick="cale()" style="width:150px"/></th>
+    <th width="200" scope="col" ><input type="button" value="统计" onclick="showcale()" style="width:150px" /></th>
+    <th width="161" scope="col" ><input type="button" value="使用样式" onclick="change()" style="width:150px" /></th>
+  </tr>
+</table>
+<br/>
+<hr id="flag"/>
+</body>
+</html>

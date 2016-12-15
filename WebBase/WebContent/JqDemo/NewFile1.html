@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>向左向右向前看</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+
+</head>
+<body>
+ 	<button id='rd' type="button">右下</button>
+ 	<button class='lt' type="button">左上</button>
+ 	<button id='ld' type="button">左下</button>
+ 	<button class='rt' type="button">右上</button>
+ 	
+<div id="de"
+ 	style="position: relative; width: 24px; height: 32px; border: 1px solid red;"></div>
+ 
+ 	<script type="text/javascript">
+ 		$('#rd').bind('click', function() {
+ 			$('#de').animate({
+ 				left : '+=50px',
+ 				top: '+=50px'
+ 			}, 500);
+ 		});
+ 		$('.lt').bind('click', function() {
+ 			$('#de').animate({
+ 				left : '-=50px',
+ 				top  : '-=50px'
+ 			}, 500);
+ 		});
+ 		$('#ld').bind('click', function() {
+ 			$('#de').animate({
+ 				left : '-=50px',
+ 				top: '+=50px'
+ 			}, 500);
+ 		});
+ 		$('.rt').bind('click', function() {
+ 			$('#de').animate({
+ 				left : '+=50px',
+ 				top  : '-=50px'
+ 			}, 500);
+ 		});
+ 	
+ 		
+ 	</script>
+ 	
+
+ 
+
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-package com.ddb.javacore.boomboomboom;
+package boomboomboom;
 
 public interface Note {
 	public static final String Boom="TNT";

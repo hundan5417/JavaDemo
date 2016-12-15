@@ -1,4 +1,4 @@
-package com.ddb.javacore.ylee;
+package ylee;
 
 class Teacher {
 	String name;

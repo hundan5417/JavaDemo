@@ -1,4 +1,4 @@
-package com.ddb.javacore.ylew;
+package ylew;
 
 public class sanjiaoxing2 {
 

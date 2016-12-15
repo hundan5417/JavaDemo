@@ -1,4 +1,4 @@
-package com.ddb.javacore.base;
+package base;
 
 public class Java10192 {
 	public static void main(String[] args) {

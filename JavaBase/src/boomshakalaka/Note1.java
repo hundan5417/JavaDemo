@@ -1,4 +1,4 @@
-package com.ddb.javacore.boomshakalaka;
+package boomshakalaka;
 
 public class Note1 extends Note0 {
 	public Note1(){

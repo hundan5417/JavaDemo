@@ -1,4 +1,4 @@
-package com.ddb.javacore.ylew;
+package ylew;
 
 public class hangshu {
 	public void hangshu(String[] args){

@@ -1,4 +1,4 @@
-package com.ddb.javacore.Demo;
+package Demo;
 
 import java.io.PrintStream;
 

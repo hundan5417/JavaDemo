@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script language="javascript">
+	function st(name,gx) {
+		this.name = name;
+		this.gx = gx;
+	}
+	function gx() {
+		return this.name;
+	}
+
+	
+	function printSelf() {
+		var s = new st("g", 20, "1265sef");
+		//for (var ie in s) {
+			document.writeln(s[0]);
+			//document.writeln(s[1]);
+			//document.writeln(s[2]);
+		//}
+	}
+		
+		//alert(s.gx());
+		//alert(s.name);
+
+	
+</script>
+
+</head>
+<body>
+	<input type="button" value="点击" onclick="printSelf()"/>
+
+
+
+</body>
+</html>

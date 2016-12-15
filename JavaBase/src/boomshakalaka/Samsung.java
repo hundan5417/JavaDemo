@@ -1,4 +1,4 @@
-package com.ddb.javacore.boomshakalaka;
+package boomshakalaka;
 
 import lombok.Data;
 import lombok.Getter;

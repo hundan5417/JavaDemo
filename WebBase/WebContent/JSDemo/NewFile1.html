@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style type="text/css">
+  #face 
+  { 
+  width:300px; 
+  height:300px; 
+  border:2px solid #ccc; 
+  border-radius:50%; 
+  position:absolute;}
+  #leftEye,#rightEye { 
+  width:50px; 
+  height:50px; 
+  background-color:black; 
+  border:2px solid #ccc; 
+  border-radius:50%; 
+  position:absolute;}
+ #mouth{ 
+ width:60px; 
+ border-top:8px solid black; 
+ position:absolute;}
+</style>
+<body>
+<div id="box">
+<div id="face"></div>
+<div id="leftEye"></div>
+<div id="rightEye"></div>
+<div id="mouth"></div>
+</div>	
+<script>
+var box=document.getElementById("box");
+var oWidth=0;
+var oHeight=0;
+var offsetX=0;
+box.onmousedown = function(event){
+	var e = event || window.event;
+		var target = e.target || e.scrElement;
+		if(target.id == "face" || target.id == "leftEye" || target.id == "rightEye" || target.id == "mouth"){
+			offsetX = e.offsetX;
+			offsetY = e.offsetY;
+		}				
+		document.onmousemove = function(event){
+			var e = event || window.event;
+			var target = e.target || e.scrElement;
+			if(target.id == "face" || target.id == "leftEye" || target.id == "rightEye" || target.id == "mouth"){
+				target.style.left = e.clientX - offsetX + "px";
+				target.style.top = e.clientY - offsetY + "px";
+			}				
+		}
+	}
+	box.onmouseup = function(){
+		document.onmousemove = "";
+}
+</script>
+</body>
+</html>

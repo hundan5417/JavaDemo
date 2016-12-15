@@ -1,4 +1,4 @@
-package com.ddb.javacore.boomshakalaka;
+package boomshakalaka;
 
 public class Note9 extends Samsung {
 

@@ -1,4 +1,4 @@
-package com.ddb.javacore.ylee;
+package ylee;
 
 public class Outter {
 	private Inner inner;// 用来保存inner类的一个实例化对象==个体

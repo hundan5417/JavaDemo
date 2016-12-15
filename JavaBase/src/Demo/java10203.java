@@ -1,4 +1,4 @@
-package com.ddb.javacore.Demo;
+package Demo;
 
 public class java10203 {
 

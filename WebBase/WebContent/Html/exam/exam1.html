@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>九九八十一</title>
+<script type="text/javascript"
+	src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<style type="text/css">
+.t {
+	background-color: lightblue;
+	color: red;
+	text-align: center;
+	border: 1px solid black;
+	aligb:center;
+	valign:center;
+}
+</style>
+</head>
+<body>
+	<p style="text-align: center; font-family: 微软雅黑; font-size: 25px">九九乘法口诀表</p>
+	<hr />
+		<div align="center" valign="center">    
+	<input value="打印乘法口诀表" type="button" id="bt1" />
+    <input value="统计" type="button" id="bt2">
+	<input value="样式" type="button" id="bt3">
+	
+	</div>
+	<br />
+	
+		<!-- 设置一个div，接收表格 -->
+	<div id="div" style="text-align: center;"></div>
+	
+	<script type="text/javascript">
+		$("#bt1").one('click',function() {         <!--方法一-->
+			<!-- 设置一个变量，拼凑出一个table标签出来-->
+             var tab = ("<table border=\"1\" id='99' align='center' valign='center'>");
+					for (i = 1; i < 10; i++) {
+						<!--设置tr的标签id是一个变量，方法如下-->
+                        tab += ("<tr id=\""+i+"\">");
+						for (j = 1; j < 10; j++) {
+							if (j <= i) {
+								tab += ("<td  width='50px'>" + j + "*" + i
+										+ "=" + i * j + "</td>");
+                            } else {
+								tab += ("<td>&nbsp;</td>");
+							}
+						}
+						tab += ("</tr>");
+						var tabl = ("</table>");
+                    }
+					<!-- 在div中追加上述两个内容，拼凑的标签 -->
+                   	$("#div").append(tab, tabl);          <!--方法二-->
+					var x = 0;
+		<!--$(#id).one(事件，方法())这个代表事件只触发一次-->
+        $("#bt2").one('click',function() {
+                      for (var i = 1; i < 10; i++) {
+                    		<!-- 拼凑出字符串的样子是这样的 id是变量表示方式是:"#" + 变量名-->
+                      $("#" + i).append("<td style='text-align: center;' width='50px'>"	+ i * (1 + i) * i / 2 + "</td>");
+							}
+							var tr = ("<tr id = 'tr'>");
+							for (var x = 1; x < 10; x++) {
+								tr += ("<td style='text-align: center;' width='50px'>" + x * (x + 9) * (10 - x) / 2 + "</td>");
+							}
+							tr += ("<td style='text-align: center;' width='50px'>总计</td>")
+							$("#99").append(tr);
+                        });            <!--方法二的结尾-->
+		$("#bt3").one('click', function() {        <!--方法三-->
+			$("#99").addClass("t");
+			$("#99").attr("cellspacing",0);
+		});                             <!--方法三的结尾-->
+                });                     <!--方法一的结尾-->
+	</script>
+</body>
+</html>

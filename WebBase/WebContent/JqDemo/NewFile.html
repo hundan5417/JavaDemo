@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>大大大小小小</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+
+</head>
+<body>
+	<div>
+		中国
+		<p>
+			<label>北京</label> <span><label id="007">苏州</label></span>
+		</p>
+		<label class="pp">重庆</label>
+	</div>
+	<script>
+	$('div label').css('color', 'red');
+	$(".pp").replaceWith("<b>上海</b>");
+	$("#007").append(" 余姚");
+	
+	
+</script>
+
+
+	<div id="dd" style="width: 8px; height: 16px; border: 1px solid red;"></div>
+	<button type="button" id="big">大大大</button>
+	<button type="button" class="small">小小小</button>
+
+
+	<script type="text/javascript">
+	var x = 8;
+	var y = 16;
+$('#big').bind('click',function(){
+	$("#dd").animate({
+		width:2*x + 'px',
+	    height:2*y + 'px'
+	},3000);
+	x *= 2;
+	y *= 2;
+	
+});
+$('.small').bind('click',function(){
+	$("#dd").animate({
+		width:x/2 + 'px',
+	    height:y/2 + 'px'
+	},3000);
+	x/=2;
+	y/=2;
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>

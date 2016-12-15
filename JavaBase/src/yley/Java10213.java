@@ -1,4 +1,4 @@
-package com.ddb.javacore.yley;
+package yley;
 
 public class Java10213 {
 
