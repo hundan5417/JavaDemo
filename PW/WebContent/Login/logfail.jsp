@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body style="background-image:url('../Images/logout.jpg');background-repeat:repeat;background-size: 100%;">
+<body style="background-image:url('../Images/logfail.jpg');background-repeat:repeat;background-size: 100%;">
 <%
      response.setHeader("refresh", "4,login.jsp");
      session.invalidate();
 
 %>
 <dir>
-<p style="margin-left: 50px; margin-top:400px;font-size: 30px;color:yellow;">注销成功，稍后调回登录界面！</p>
+<p style="margin-left: 50px; margin-top:400px;font-size: 30px;color:yellow;">登录失败，请正确输入用户名或密码，稍后调回登录界面！</p>
 <p style="margin-left: 50px; font-size: 30px;color:yellow;">如果没有跳转，请点击<a href="/PW/Login/andy.jsp">这儿</a>手动跳转。</p>
 </dir>
 

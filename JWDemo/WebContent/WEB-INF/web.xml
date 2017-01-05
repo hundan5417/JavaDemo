@@ -9,43 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <servlet-name>InitServletDemo</servlet-name>
-    <servlet-class>com.java.javaweb.servlet.InitServletDemo</servlet-class>
-    <init-param>
-      <param-name>name:</param-name>
-      <param-value>cn</param-value>
-    </init-param>
-    <init-param>
-      <param-name>age:</param-name>
-      <param-value>77</param-value>
-    </init-param>
-    <init-param>
-      <param-name>id:</param-name>
-      <param-value>00000000</param-value>
-    </init-param>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>InitServletDemo</servlet-name>
-    <url-pattern>/servlet/InitServletDemo</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>InitServletDemo2</servlet-name>
-    <servlet-class>com.java.javaweb.servlet.InitServletDemo2</servlet-class>
-    <load-on-startup>5</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>InitServletDemo2</servlet-name>
-    <url-pattern>/InitServletDemo2</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>InitServletDemo3</servlet-name>
-    <servlet-class>com.java.javaweb.servlet.InitServletDemo3</servlet-class>
-    <load-on-startup>3</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>InitServletDemo3</servlet-name>
-    <url-pattern>/servlet/InitServletDemo3</url-pattern>
-  </servlet-mapping>
+  <listener>
+    <listener-class>com.java.javaweb.listener.ServletContextInitDis</listener-class>
+  </listener>
 </web-app>

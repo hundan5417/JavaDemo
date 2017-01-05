@@ -45,14 +45,14 @@ public class MyLoginServletDemo extends HttpServlet {
 		out.println("<H2>用户输入信息如下</H2>");
 		//request.setCharacterEncoding("GB2312");    第一种修改参数乱码方法：提前设定得到参数的编译方式
 		String username = request.getParameter("username"); 
-		String usename = new String(username.getBytes("iso8859-1"),"GB2312");
+		//String usename = new String(username.getBytes("iso8859-1"),"GB2312");
 		
 		if(null==username || username=="") 
 			username="未输入";
 		String password = request.getParameter("password"); 
 		if(null==password || password=="") 
 			password="未输入";
-		out.println("<H2>用户名： "+ usename +"</H2>");
+		out.println("<H2>用户名： "+ username +"</H2>");
 		out.println("<H2>密码： "+ password +"</H2>");
 		out.println("</BODY>");
 		out.println("</HTML>");
