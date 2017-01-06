@@ -3,7 +3,7 @@ package auto;
 import org.springframework.stereotype.Component;
 
 /**
- * component´ú±íÒ»ÖÖ×é¼ş
+ * componentä»£è¡¨ä¸€ç§ç»„ä»¶
  * 
  * @author win
  */

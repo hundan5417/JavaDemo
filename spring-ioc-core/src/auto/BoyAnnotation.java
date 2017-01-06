@@ -6,21 +6,21 @@ import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
-/*@Component("boyAnnotation"£©    ¸ø×é¼şÈ¡¸öÃû×Ö
-* @Autowird   ×¢ÈëÊôĞÔ
-* @Resource   ×¢ÈëÊôĞÔ£¬¿ÉÒÔ·ÅÔÚÊôĞÔ»òÕßsetter·½·¨ÉÏÃæ
-*             ÊôĞÔname½âÎöbeanµÄ×Ö£¬type½âÎöbeanµÄÀàĞÍ£¬byName×Ô¶¯×¢Èë
-*             @Resource(name="useGirlFriend")¡¢@Resource(type="useGirlFriend.class")
-* @Repository dao²ãbean(³Ö¾Ã»¯²ã)
-* @Service  service²ãbean(·şÎñ²ã)
-* @Controller  mvc¿ØÖÆ²ãbean(±íÏÖ²ã)
+/*@Component("boyAnnotation")ç»™ç»„ä»¶å–ä¸ªåå­—
+* @Autowird   æ³¨å…¥å±æ€§ï¼Œå¯ä»¥æ”¾åœ¨å±æ€§æˆ–è€…setteræ–¹æ³•ä¸Šé¢byTypeè‡ªåŠ¨æ³¨å…¥
+* @Resource   æ³¨å…¥å±æ€§ï¼Œå¯ä»¥æ”¾åœ¨å±æ€§æˆ–è€…setteræ–¹æ³•ä¸Šé¢
+*             å±æ€§nameè§£æbeançš„åå­—ï¼Œtypeè§£æbeançš„ç±»å‹ï¼ŒbyNameè‡ªåŠ¨æ³¨å…¥
+*             @Resource(name="useGirlFriend")ã€@Resource(type="useGirlFriend.class")
+* @Repository daoå±‚bean(æŒä¹…åŒ–å±‚)
+* @Service  serviceå±‚bean(æœåŠ¡å±‚)
+* @Controller  mvcæ§åˆ¶å±‚bean(è¡¨ç°å±‚)
 * 
-* @Scope("session")beanµÄ¹²ÏíÓò
-*        singleton  µ¥Àı£¬¹²Ïíbean
-*        prototyoe  ×¢ÈëĞÂµÄbean
-*        request   http request ÓĞĞ§(Ò»¸öÇëÇóÒ»¸öĞÂµÄbean)
-*        session   http session ÓĞĞ§(Ò»¸öÇëÇóÒ»¸öĞÂµÄbean)
-*        global session portlet web ÓĞĞ§È«¾Ösession
+* @Scope("session")beançš„ä½œç”¨äº
+*        singleton  å•ä¾‹ï¼Œå…±äº«bean
+*        prototyoe  æ³¨å…¥æ–°çš„bean
+*        request   http request æœ‰æ•ˆ(ä¸€ä¸ªè¯·æ±‚ä¸€ä¸ªæ–°çš„bean)
+*        session   http session æœ‰æ•ˆ(ä¸€ä¸ªè¯·æ±‚ä¸€ä¸ªæ–°çš„bean)
+*        global session portlet web æœ‰æ•ˆå…¨å±€session
 *   @author win
 */
 
