@@ -23,6 +23,7 @@ public class OgnlTest1 {
 		context.put("student", stu);
 		context.put("teacher", tea);
 		PrintStream out = System.out;
+		//out.println(Ognl.getValue("*.name", context));
 		out.println(Ognl.getValue("name", context, stu));
 		out.println(Ognl.getValue("name", context, tea));
 		out.println(Ognl.getValue("student.name", context));

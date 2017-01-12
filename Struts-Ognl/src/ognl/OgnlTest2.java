@@ -95,10 +95,11 @@ public class OgnlTest2 {
 	    teacherlist.add(new Teacher("Jack5", 2800));
 	    teacherlist.add(new Teacher("Jack6", 3000));
 	    context.put("teacherlist", teacherlist);
-	    //
+	    // 
 	    System.out.println(Ognl.getValue("teacherlist.{name}", context));
 	    System.out.println(Ognl.getValue("teacherlist.{#this.name.toUpperCase()}", context));
 	    System.out.println(Ognl.getValue("teacherlist.{#this.salary>2500?#this.salary:#this.salary+99}", context));
+	    System.out.println(Ognl.getValue("teacherlist.{#this.salary}", context));
 	    //
 	    System.out.println(Ognl.getValue("teacherlist.{?#this.salary>2500}", context));
 	    System.out.println(Ognl.getValue("teacherlist.{?#this.salary>2500}[0]", context));
