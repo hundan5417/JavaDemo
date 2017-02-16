@@ -111,15 +111,16 @@ public class UsersTest {
 
 	public static void main(String[] args) {
 		UsersTest test = new UsersTest();
-		//Long userId = test.insert(new Users(null,"jack11","jack11"));
+		Long userId = test.insert(new Users(null,"jack11","jack11"));//插入数据
 		//logger.info(userId);
 		//logger.info(test.getUserById(userId));
 
-	    test.update(new Users(6L,"tom11","tom11"));
-		Users users = new Users();
-		users.setId(6L);
-		test.delete(users);
-		logger.info(test.getUserById(5L));
+
+	 // test.update(new Users(11L,"tom11","tom11"));//修改数据
+	/*	Users users = new Users();
+		users.setId(11L);//更新持久化实体
+		test.delete(users);//删除数据
+		logger.info(test.getUserById(5L));*/
 
 		List<Users> userList = test.getUsersList();
 		for (Users users1 : userList) {

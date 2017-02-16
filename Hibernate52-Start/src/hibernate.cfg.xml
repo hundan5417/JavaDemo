@@ -15,7 +15,7 @@
 		<!-- hbm2ddl.auto create-drop 先创建后删除 create 每次运行创建表 update 更新表结构 validate 
 			校验映射文件和数据库中表对应情况(不常用) -->
 		<property name="hbm2ddl.auto">update</property>
-		<!-- 导入模块的配置文件 -->
+		<!-- 导入模块的配置文件(在users.hbm.xml里面配置持久化类，将持久化类加载到其中) -->
 		<mapping resource="hibernate/users/Users.hbm.xml" />
 	</session-factory>
 
