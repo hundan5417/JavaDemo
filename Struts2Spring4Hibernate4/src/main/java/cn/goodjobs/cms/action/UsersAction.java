@@ -51,6 +51,7 @@ public class UsersAction extends ActionSupport{
 	
 	@SuppressWarnings("unused")
 	public String save()throws Exception{
+		//下面是一个三目运算符，由于"="运算权限最低，所以开始位置是users---到最后。表示为getId为空，id取第二部分，不为空，取第三部分。
 		Long id = users.getId() == null ? usersServices.createUsers(users) : usersServices.modifyUsers(users);		
 		return "save";
 
@@ -60,7 +61,8 @@ public class UsersAction extends ActionSupport{
 		return "input";
 	}
 	
-	public String edit()throws Exception{		
+	public String edit()throws Exception{
+		//下面是一个三目运算符，由于"="运算权限最低，所以开始位置是users---到最后。表示为getId为空，id取第二部分，不为空，取第三部分。
 		this.users = users.getId() != null ? usersServices.getUsers(users.getId()) : null;	
 		return "input";
 	}
