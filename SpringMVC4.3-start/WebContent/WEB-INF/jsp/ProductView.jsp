@@ -10,12 +10,13 @@
 	<div id="global">
 		<h4>The product has been saved!</h4>
 		<h5>Details:</h5>
-		Tips:${message}<br /> 
-		Product ID:${product.id}<br /> 
-		Product Name:${product.name}<br /> 
-		Product description:${product.description}<br />
-		Product price:${product.price}<br />
+		Tips:${message}<br /> Product ID:${product.id}<br /> Product
+		Name:${product.name}<br /> Product Description:${product.description}<br />
+		Product Price:${product.price}<br /> Product Time:${product.time}<br />
+		Product Age:${product.age}<br />
 
 	</div>
+	<a href="http://localhost:8080/SpringMVC4.3-start/product_input.action">返回添加</a>
+	<a href="http://localhost:8080/SpringMVC4.3-start/product_list.action">查看所有</a>
 </body>
 </html>
